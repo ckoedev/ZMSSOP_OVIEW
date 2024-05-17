@@ -1,0 +1,183 @@
+{
+    "_version": "1.7.0",
+    "start_url": "start.html",
+    "sap.app": {
+        "id": "gisa.mss.MSSOnePage.MSSOnePageOview",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{app_title}}",
+        "description": "{{app_description}}",
+        "dataSources": {
+            "oviewModel": {
+                "uri": "/sap/opu/odata/gisa/MSS_ONEPAGE_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "localUri": "localService/oviewModel/metadata.xml",
+                    "annotations": [
+                        "filter",
+                        "EmployeeSearchHelp"
+                    ]
+                }
+            },
+            "filter": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/filter.xml",
+                "settings": {
+                    "localUri": "annotations/filter.xml"
+                }
+            },
+            "EmployeeSearchHelp": {
+                "uri": "annotations/EmployeeSearchHelp.xml",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "annotations/EmployeeSearchHelp.xml"
+                }
+            }
+        },
+        "sourceTemplate": {
+            "id": "OVP.smartovptemplate",
+            "version": "1.41.1",
+            "toolsId": "bcddfef5-856b-4dbd-b79d-d255b47ff7b2"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.65.6",
+            "libs": {
+                "sap.m": {
+                    "minVersion": ""
+                },
+                "sap.ovp": {},
+                "sap.ui.core": {
+                    "minVersion": ""
+                },
+                "sap.ui.layout": {
+                    "minVersion": ""
+                },
+                "sap.ushell": {
+                    "minVersion": ""
+                }
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties",
+                "settings": {
+                    "bundleName": "gisa.mss.MSSOnePage.MSSOnePageOview.i18n.i18n"
+                }
+            },
+            "@i18n": {
+                "preload": true,
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties",
+                "settings": {
+                    "bundleName": "gisa.mss.MSSOnePage.MSSOnePageOview.i18n.i18n"
+                }
+            },
+            "oviewModel": {
+                "dataSource": "oviewModel",
+                "settings": {
+                    "defaultCountMode": "Inline"
+                }
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.ovp.app.Main": {
+                        "controllerName": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.custom"
+                    }
+                },
+                "sap.ui.viewExtensions": {
+                    "sap.ovp.app.Main": {
+                        "SmartFilterBarGlobalActionExtension": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.customAction",
+                            "type": "XML"
+                        },
+                        "SmartFilterBarControlConfigurationExtension|GlobalFilters": {
+                            "className": "sap.ui.core.Fragment",
+                            "fragmentName": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.customFilter",
+                            "type": "XML"
+                        }
+                    }
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css",
+                    "id": "style"
+                }
+            ]
+        }
+    },
+    "sap.ovp": {
+        "globalFilterModel": "oviewModel",
+        "globalFilterEntityType": "EmployeeFilterData",
+        "containerLayout": "resizable",
+        "enableLiveFilter": false,
+        "considerAnalyticalParameters": true,
+        "showDateInRelativeFormat": true,
+        "useDateRangeType": true,
+        "smartVariantRequired": true,
+        "cards": {
+            "card01": {
+                "template": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.holidayCard",
+                "settings": {
+                    "title": "{{card02_title}}",
+                    "defaultSpan": {
+                        "cols": 1,
+                        "rows": 1
+                    }
+                }
+            },
+            "card02": {
+                "template": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.flextimeCard",
+                "settings": {
+                    "title": "{{card03_title}}",
+                    "defaultSpan": {
+                        "cols": 1,
+                        "rows": 1
+                    }
+                }
+            },
+            "card04": {
+                "template": "gisa.mss.MSSOnePage.MSSOnePageOview.ext.tvioCard",
+                "settings": {
+                    "title": "{{card05_title}}",
+                    "defaultSpan": {
+                        "cols": 1,
+                        "rows": 1
+                    }
+                }
+            }
+        },
+        "chartSettings": {}
+    },
+    "sap.platform.abap": {
+        "uri": "/sap/bc/ui5_ui5/sap/zmssop_oview",
+        "_version": "1.1.0"
+    }
+}

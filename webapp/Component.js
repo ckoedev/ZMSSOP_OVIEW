@@ -1,0 +1,1 @@
+(function(){"use strict";jQuery.sap.declare("gisa.mss.MSSOnePage.MSSOnePageOview.Component");jQuery.sap.require("sap.ovp.app.Component");sap.ovp.app.Component.extend("gisa.mss.MSSOnePage.MSSOnePageOview.Component",{metadata:{manifest:"json"}})})();

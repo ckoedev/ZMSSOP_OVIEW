@@ -1,0 +1,31 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui" xmlns:l="sap.ui.layout"
+	xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<List id="bdayList" headerText="Geburtstagsliste" growing="true" growingThreshold="4"
+		items="{ path: '/EmployeeBdayDataSet', sorter: [ { path: 'GbdatNext', descending: false } ] }">
+		<items>
+			<CustomListItem>
+				<HBox>
+					<Image id="pic" width="2rem" alt="Benutzerbild" src="{ path : 'Photo', formatter : 'gisa.mss.MSSOnePage.util.formatter.photo' }"
+						class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom"/>
+					<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+						<Link text="{FormattedName} (#{= parseFloat(${EmployeeNumber}) })" target="{Photo}" press="onCardLinkClick"/>
+						<Label text="{ path: 'GbdatNext', type: 'sap.ui.model.type.Date', formatOptions: { source: { pattern: 'yyyy-MM-ddTHH:mm:ss' }, pattern: 'dd.MM.yyyy' } }"/>
+						<Label text="{EmployeeOrgunitLongtext}"/>
+					</VBox>
+				</HBox>
+			</CustomListItem>
+		</items>
+		<headerToolbar class="sapUiTinyMargin">
+			<ToolbarSpacer/>
+			<OverflowToolbar active="true" press="onCardHeaderLinkClick" height="auto">
+				<core:Icon size="2rem" src="sap-icon://appointment" color="Default"/>
+				<VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+					<Title level="H2" text="{i18n>card00_title}"/>
+					<VBox id="orgUnitsToolbar" items="{ path: 'Helper>/orgUnits' }" modelContextChange=".onDraw">
+						<Label id="bdayUnitHeader" text="{ path: 'Helper>EmployeeOrgunitLongtext' }"/>
+					</VBox>
+				</VBox>
+			</OverflowToolbar>
+		</headerToolbar>
+	</List>
+</core:FragmentDefinition>

@@ -1,0 +1,298 @@
+{
+    "resources": [
+        {
+            "name": ".che/project.json"
+        },
+        {
+            "name": ".gitignore"
+        },
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "Gruntfile.js"
+        },
+        {
+            "name": "annotations/EmployeeSearchHelp.xml"
+        },
+        {
+            "name": "annotations/filter.xml"
+        },
+        {
+            "name": "annotations/genderChart.xml"
+        },
+        {
+            "name": "annotations/holidayChart.xml"
+        },
+        {
+            "name": "annotations/timebalanceChart.xml"
+        },
+        {
+            "name": "css/style.css"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "dist"
+        },
+        {
+            "name": "ext/bdayCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/bdayCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/bdayCard/Component.js"
+        },
+        {
+            "name": "ext/bdayCard/bdayCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/bdayCard/bdayCard.controller.js"
+        },
+        {
+            "name": "ext/bdayCard/bdayCard.fragment.xml"
+        },
+        {
+            "name": "ext/custom-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/custom.controller.js"
+        },
+        {
+            "name": "ext/customAction.fragment.xml"
+        },
+        {
+            "name": "ext/customFilter.fragment.xml"
+        },
+        {
+            "name": "ext/flextimeCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/flextimeCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/flextimeCard/Component.js"
+        },
+        {
+            "name": "ext/flextimeCard/flextimeCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/flextimeCard/flextimeCard.controller.js"
+        },
+        {
+            "name": "ext/flextimeCard/flextimeCard.fragment.xml"
+        },
+        {
+            "name": "ext/flextimeCard/timebalanceCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/flextimeCard/timebalanceCard.controller.js"
+        },
+        {
+            "name": "ext/flextimeCard/timebalanceCard.fragment.xml"
+        },
+        {
+            "name": "ext/genderChart/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/genderChart/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/genderChart/Component.js"
+        },
+        {
+            "name": "ext/genderChart/genderChart-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/genderChart/genderChart.controller.js"
+        },
+        {
+            "name": "ext/genderChart/genderChart.fragment.xml"
+        },
+        {
+            "name": "ext/holidayCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/holidayCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/holidayCard/Component.js"
+        },
+        {
+            "name": "ext/holidayCard/holidayCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/holidayCard/holidayCard.controller.js"
+        },
+        {
+            "name": "ext/holidayCard/holidayCard.fragment.xml"
+        },
+        {
+            "name": "ext/overtimeCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/overtimeCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/overtimeCard/Component.js"
+        },
+        {
+            "name": "ext/overtimeCard/overtimeCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/overtimeCard/overtimeCard.controller.js"
+        },
+        {
+            "name": "ext/overtimeCard/overtimeCard.fragment.xml"
+        },
+        {
+            "name": "ext/timebalanceCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/timebalanceCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/timebalanceCard/Component.js"
+        },
+        {
+            "name": "ext/timebalanceCard/timebalanceCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/timebalanceCard/timebalanceCard.controller.js"
+        },
+        {
+            "name": "ext/timebalanceCard/timebalanceCard.fragment.xml"
+        },
+        {
+            "name": "ext/tvioCard/Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/tvioCard/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "ext/tvioCard/Component.js"
+        },
+        {
+            "name": "ext/tvioCard/tvioCard-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "ext/tvioCard/tvioCard.controller.js"
+        },
+        {
+            "name": "ext/tvioCard/tvioCard.fragment.xml"
+        },
+        {
+            "name": "extended_runnable_file.html"
+        },
+        {
+            "name": "i18n/18n_de.properties"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "i18n/i18n_de.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_de"
+        },
+        {
+            "name": "i18n/i18n_en.properties",
+            "raw": "i18n/i18n.properties",
+            "locale": "_en"
+        },
+        {
+            "name": "img/bday.png"
+        },
+        {
+            "name": "img/readme.txt"
+        },
+        {
+            "name": "localService/mockserver-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "localService/mockserver.js"
+        },
+        {
+            "name": "localService/oviewModel/metadata.xml"
+        },
+        {
+            "name": "manifest-bundle.zip"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "node_modules"
+        },
+        {
+            "name": "package-lock.json"
+        },
+        {
+            "name": "package.json"
+        },
+        {
+            "name": "resources/sap-ui-version.json"
+        },
+        {
+            "name": "resources.json",
+            "merged": true
+        },
+        {
+            "name": "sap-ui-cachebuster-info.json"
+        },
+        {
+            "name": "test/fakeLRep.json"
+        },
+        {
+            "name": "test/testOVP.html"
+        },
+        {
+            "name": "test/testOVPwithMock.html"
+        },
+        {
+            "name": "util/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "util/formatter.js"
+        }
+    ]
+}

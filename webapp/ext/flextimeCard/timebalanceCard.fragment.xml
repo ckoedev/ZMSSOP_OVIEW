@@ -1,0 +1,34 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:ovp="sap.ovp.ui" xmlns:l="sap.ui.layout"
+	xmlns:micro="sap.suite.ui.microchart" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<Panel headerText="{i18n>card03_title}" width="100%" height="100%">
+		<List id="flextimeList" growing="true" growingThreshold="5"
+			items="{ path: '/EmployeeTimeDataSet', sorter: [ { path: 'FlextimeAbs', descending: true } ], filters : [ { path : 'Quotatype', operator : 'EQ', value1 : '10'} ] }">
+			<items>
+				<CustomListItem>
+					<Link class="sapUiTinyMarginBegin" text="{EmployeeNumber}" press="onCardLinkClick"/>
+					<micro:InteractiveBarChart labelWidth="35%" max="100" min="-100" press="onCardLinkClick">
+						<micro:bars>
+							<micro:InteractiveBarChartBar label="{FormattedName}" tooltip="{EmployeeNumber}"
+								value="{ path : 'Flextime', formatter : 'gisa.mss.MSSOnePage.util.formatter.flextime' }"
+								color="{ path : 'FlextimeAbs', formatter : 'gisa.mss.MSSOnePage.util.formatter.flextimeBarColor' }"/>
+						</micro:bars>
+					</micro:InteractiveBarChart>
+				</CustomListItem>
+			</items>
+		</List>
+		<headerToolbar>
+			<ToolbarSpacer/>
+			<OverflowToolbar active="true" press="onCardHeaderLinkClick" height="7rem">
+				<VBox class="sapUiMediumMarginBegin sapUiMediumMarginTopBottom">
+					<Label text="{i18n>card03_title}" class="sapMTitleBold"/>
+					<Label text="{i18n>criticalityflextimeUnit}"/>
+					<FlexBox alignItems="Center">
+						<Label id="criticalityflextime" text="0" class="sapMNCValue" modelContextChange=".onDraw"/>
+						<Label text="{i18n>criticalityflextimeMeaning}" class="sapUiSmallMarginBegin"/>
+					</FlexBox>
+				</VBox>
+			</OverflowToolbar>
+		</headerToolbar>
+	</Panel>
+	<ToolbarSpacer/>
+</core:FragmentDefinition>

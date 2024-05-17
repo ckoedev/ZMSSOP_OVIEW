@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "3.1"
+metadata:
+  name: gisa.mss.mssonepage.mssonepageoview
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        log: 1
+        target:
+          destination: HCMSVW
+          url: http://ht2:443
+        app:
+          name: ZMSSOP_OVIEW
+          description: MSS OnePage
+          package: ZITC_HR_FIO
+          transport: HT2K917518
+        exclude:
+          - /test/
