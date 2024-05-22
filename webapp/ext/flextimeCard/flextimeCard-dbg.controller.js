@@ -35,12 +35,12 @@
 			let iCriticalityMedium = parseInt(oSettingsModel.getProperty("/FLEXTIME_CRITICALITY_MEDIUM"));
 			let iCriticalityLow = parseInt(oSettingsModel.getProperty("/FLEXTIME_CRITICALITY_LOW"));
 
-			oModel.read("/EmployeeTimeDataSet", {
+			oModel.read("/EmployeeTimeHolidayDataSet", {
 				filters: [
 					new sap.ui.model.Filter({
 						path: "Quotatype",
 						operator: sap.ui.model.FilterOperator.EQ,
-						value1: "01"
+						value1: "09"
 					})
 				],
 				success: function (oData) {
@@ -78,7 +78,7 @@
 
 		onCardLinkClick: function (oEvent) {
 			let sManagerNumber = this.getView().getModel("managerModel").getProperty("/EmployeeNumber");
-			let sNavLink = "Employee-launchReports?ScenarioId=SAP_EXAMPLE&/reportResult/" + sManagerNumber + "/true/ZGET_EMPLOYEE_TIMEDATA/Urlaub%252FGLZ";
+			let sNavLink = "Employee-launchReports?ScenarioId=Z_MSS_REP&/reportResult/" + sManagerNumber + "/true/RPTQTA10/Abwesenheitskontingente/false";
 
 			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
 				target: {
@@ -89,7 +89,7 @@
 
 		onCardHeaderLinkClick: function () {
 			let sManagerNumber = this.getView().getModel("managerModel").getProperty("/EmployeeNumber");
-			let sNavLink = "Employee-launchReports?ScenarioId=SAP_EXAMPLE&/reportResult/" + sManagerNumber + "/true/ZGET_EMPLOYEE_TIMEDATA/Urlaub%252FGLZ";
+			let sNavLink = "Employee-launchReports?ScenarioId=Z_MSS_REP&/reportResult/" + sManagerNumber + "/true/RPTQTA10/Abwesenheitskontingente/false";
 
 			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
 				target: {

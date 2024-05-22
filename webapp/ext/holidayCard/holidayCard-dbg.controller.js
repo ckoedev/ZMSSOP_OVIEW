@@ -155,7 +155,7 @@
 
 		onCardHeaderLinkClick: function () {
 			let sManagerNumber = this.getView().getModel("managerModel").getProperty("/EmployeeNumber");
-			let sNavLink = 	"Employee-launchReports?ScenarioId=SAP_EXAMPLE&/reportResult/" + sManagerNumber + "/true/ZGET_EMPLOYEE_TIMEDATA/Urlaub%252FGLZ";
+			let sNavLink = "Employee-launchReports?ScenarioId=Z_MSS_REP&/reportResult/" + sManagerNumber + "/true/RPTQTA10/Abwesenheitskontingente/false";
 
 			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
 				target: {
@@ -166,7 +166,7 @@
 
 		onSelectData: function (oEvent) {
 			let sManagerNumber = this.getView().getModel("managerModel").getProperty("/EmployeeNumber");
-			let sNavLink = 	"Employee-launchReports?ScenarioId=SAP_EXAMPLE&/reportResult/" + sManagerNumber + "/true/ZGET_EMPLOYEE_TIMEDATA/Urlaub%252FGLZ";
+			let sNavLink = "Employee-launchReports?ScenarioId=Z_MSS_REP&/reportResult/" + sManagerNumber + "/true/RPTQTA10/Abwesenheitskontingente/false";
 
 			sap.ushell.Container.getService("CrossApplicationNavigation").toExternal({
 				target: {

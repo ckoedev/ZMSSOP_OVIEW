@@ -20,11 +20,11 @@
 			let l = parseInt(i.getProperty("/FLEXTIME_CRITICALITY_HIGH"));
 			let r = parseInt(i.getProperty("/FLEXTIME_CRITICALITY_MEDIUM"));
 			let a = parseInt(i.getProperty("/FLEXTIME_CRITICALITY_LOW"));
-			t.read("/EmployeeTimeDataSet", {
+			t.read("/EmployeeTimeHolidayDataSet", {
 				filters: [new sap.ui.model.Filter({
 					path: "Quotatype",
 					operator: sap.ui.model.FilterOperator.EQ,
-					value1: "01"
+					value1: "09"
 				})],
 				success: function (t) {
 					let i = 0;
